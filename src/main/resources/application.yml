@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: weather_ecosystem_service
+
+application:
+  weather:
+    base-url: "https://goweather.herokuapp.com/weather/"
+  producer:
+    base-url: "http://localhost:8080/v1/producer/"
