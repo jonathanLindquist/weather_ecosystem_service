@@ -15,7 +15,10 @@ class ProducerServiceClient(
            .uri(configProps.producer.baseUrl + "health")
            .retrieve()
            .onStatus(HttpStatusCode::is4xxClientError) {_, response ->
-               throw Exception("callHealthCheck failed: ${response.statusCode}")
+               throw Exception("callHealthCheck failed client error: ${response.statusCode}")
+           }
+           .onStatus(HttpStatusCode::is5xxServerError) {_, response ->
+               throw Exception("callHealthCheck failed server error: ${response.statusCode}")
            }
            .body(String::class.java)
 }
