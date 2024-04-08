@@ -31,6 +31,7 @@ class ClientConfig(
                         ClientHttpRequestFactorySettings.DEFAULTS
                             .withConnectTimeout(Duration.ofSeconds(1))
                             .withReadTimeout(Duration.ofSeconds(2))
+                        // most likely WAY too low for any AI calls, must bump for that use-case
                     )
                 )
         }

@@ -15,5 +15,3 @@ data class ConfigProps(
         val baseUrl: String
     )
 }
-
-
