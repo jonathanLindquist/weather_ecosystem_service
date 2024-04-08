@@ -11,6 +11,10 @@ class ProducerController(
     private val producerService: ProducerService
 ) {
     @GetMapping("/health")
-    fun healthCheck(): String =
-        producerService.callHealthCheck()
+    fun healthCheck(): String {
+        //TODO: debug infinite loop when can't reach endpoint
+//        val restTemplate = RestTemplate()
+//        return restTemplate.getForEntity("http://localhost:8080/v1/producer/health", String::class.java).body ?: ""
+        return producerService.callHealthCheck()
+    }
 }
