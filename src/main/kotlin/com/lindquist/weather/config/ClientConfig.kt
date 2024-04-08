@@ -19,7 +19,7 @@ class ClientConfig(
         return restClientBuilder.build()
     }
 
-    // Configured via comments from below Github issue, RestClientCustomizer seems best way to wrap global RestClient.Builder
+    // Configured via comments from below GitHub issue, RestClientCustomizer seems best way to wrap global RestClient.Builder
     // https://github.com/spring-projects/spring-ai/issues/354
     // notes on RestClientCustomizer here
     // https://github.com/zhouzxing/spring-boot/blob/f5b3bc7a9fef0573b919fffe573b26209bc16eef/spring-boot-project/spring-boot-docs/src/docs/asciidoc/io/rest-client.adoc#L103
