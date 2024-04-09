@@ -19,7 +19,7 @@ class WeatherController(
 
     @GetMapping("/{city}")
     fun weatherByCity(@PathVariable city: String): Weather {
-        logger.info { "Looking up weather for $city" }
+        logger.info { "Retrieving up weather for $city" }
         return weatherService.weatherByCity(city)
     }
 }

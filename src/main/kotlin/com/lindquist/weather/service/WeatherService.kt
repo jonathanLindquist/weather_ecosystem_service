@@ -13,6 +13,6 @@ class WeatherService(
     }
     fun weatherByCity(city: String) =
         weatherClient.callByCity(city)!!.also {
-            logger.info { "Retrieved weather for $city" }
+            logger.info { "Found weather for $city" }
         }
 }
